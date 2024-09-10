@@ -261,7 +261,9 @@ public class MainScreen extends javax.swing.JFrame {
         jButton1.setText("Sair");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+
                 jButton1ActionPerformed(evt);
+                logout();
             }
         });
 
@@ -338,6 +340,14 @@ public class MainScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void logout(){
+        //fecha a janela
+        this.dispose();
+        //Chama a janela de login
+        LoginScreen loginScreen = new LoginScreen();
+        loginScreen.setVisible(true);
+    }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
